@@ -1,16 +1,25 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+var path = require('path');
+console.log('path', path.resolve(__dirname, './src'))
 module.exports = {
     mode: 'development',
     resolve: {
-        extensions: ['.js', '.jsx']
+        modules: [path.resolve(__dirname, './src'), 'node_modules'],
+        extensions: ['.js', '.jsx'],
+        alias: {
+            root: path.resolve(__dirname, './src'),
+          },
     },
     module: {
         rules: [
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader'
-            }
+            },
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+              },
         ]
     },
     plugins: [new HtmlWebpackPlugin({
