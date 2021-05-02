@@ -17,8 +17,8 @@ function LoginPage() {
     const location = useLocation();
 
     // reset login status
-    useEffect(() => { 
-        dispatch(userActions.logout()); 
+    useEffect(() => {
+        dispatch(userActions.logout());
     }, []);
 
     function handleChange(e) {
@@ -56,7 +56,7 @@ function LoginPage() {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary">
+                    <button className="btn  btn-outline-secondary">
                         {loggingIn && <span className="spinner-border spinner-border-sm mr-1"></span>}
                         Login
                     </button>

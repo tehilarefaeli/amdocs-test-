@@ -75,6 +75,10 @@ class Pagination extends React.Component {
             this.setPage(this.props.initialPage);
         }
     }
+    // handelChangePageSize{
+
+
+    // }
 
     setPage(page) {
         var { items, pageSize, maxPages } = this.props;
@@ -82,6 +86,7 @@ class Pagination extends React.Component {
 
         // get new pager object for specified page
         pager = paginateService.paginate(items.length, page, pageSize, maxPages);
+           
 
         // get new page of items from items array
         var pageOfItems = items.slice(pager.startIndex, pager.endIndex + 1);
@@ -124,6 +129,9 @@ class Pagination extends React.Component {
                     <a className="page-link" onClick={() => this.setPage(pager.totalPages)} style={styles.a}>{labels.last}</a>
                 </li>
             </ul>
+
+            {/* <input type="text" value={pager.pageSize} onChange={handelChangePageSize}/> */}
+
             {pager.currentPage} / {pager.totalPages}
             </>
         );

@@ -1,3 +1,31 @@
+.jumbotron{
+  background-color: transparent;
+}
 .login-page{
-  color: red;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  h2{
+
+    text-align: center;
+
+    color:deeppink;
+  }
+  label{
+ 
+    color:deeppink;
+  }
+  .btn-primary {
+    color:black;
+    background-color: transparent;
+    border:none;
+  }
+
+  .btn-link{
+    color: black;
+    text-decoration:none ;
+  }
+  .login-page .btn-primary:focus{
+    color: transparentize($color: #000000, $amount: 0);
+  }
 }

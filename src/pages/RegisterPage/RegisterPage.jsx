@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { userActions } from '../../_actions';
+import './register-page.scss';
 
 function RegisterPage() {
     const [user, setUser] = useState({
@@ -35,7 +36,7 @@ function RegisterPage() {
     }
 
     return (
-        <div className="col-lg-8 offset-lg-2">
+        <div className="register-page col-lg-8 offset-lg-2">
             <h2>Register</h2>
             <form name="form" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -67,7 +68,7 @@ function RegisterPage() {
                     }
                 </div>
                 <div className="form-group">
-                    <button className="btn btn-primary">
+                    <button className=" btn-outline-secondary">
                         {registering && <span className="spinner-border spinner-border-sm mr-1"></span>}
                         Register
                     </button>

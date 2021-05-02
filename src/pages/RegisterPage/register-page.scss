@@ -1,0 +1,38 @@
+
+.jumbotron{
+    background-color: transparent;
+  }
+  
+  .register-page{
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    h2{
+  
+      text-align: center;
+      //font-family:  Courier, monospace;
+      color:deeppink;
+    }
+    label{
+      //font-family:  Courier, monospace;
+      color:deeppink;
+    }
+    // .btn-primary:focus,.MuiButton-root:hover{
+    //   color:blue;
+    // }
+    .btn-primary {
+        color:black;
+        background-color: transparent;
+        border:none;
+      }
+    // Button{
+    //   color:black;
+    // }
+    .btn-link{
+      color: black;
+      text-decoration:none ;
+    }
+    .login-page .btn-primary:focus{
+      color: transparentize($color: #000000, $amount: 0);
+    }
+  }
